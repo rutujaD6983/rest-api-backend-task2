@@ -44,12 +44,13 @@ function getDb() {
   return db;
 }
 
-function closedb() {
+function closeDb() {
   saveDb();
+
   if (db) {
     db.close();
     db = null;
   }
 }
 
-module.exports = { initDb, getDb, closedb, saveDb };
+module.exports = { initDb, getDb, closeDb, saveDb };
